@@ -18,7 +18,7 @@ export const authService = {
       password,
     });
 
-    if (!res.success) {
+    if (!res.success || !res.data) {
       throw new Error(res.message || 'Đăng nhập thất bại');
     }
 
